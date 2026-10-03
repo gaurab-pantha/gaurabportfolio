@@ -1,0 +1,221 @@
+/* ==========================================================================
+   RESPONSIVE OVERRIDES
+   Breakpoints: 1280 / 1024 / 768 / 425 / 375 / 320
+   ========================================================================== */
+
+/* ---- Large desktop refinement ---- */
+@media (min-width: 1441px) {
+  :root {
+    --container: 1320px;
+  }
+}
+
+/* ---- 1024px: laptop / small desktop ---- */
+@media (max-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-visual {
+    order: -1;
+    max-width: 360px;
+  }
+
+  .about-layout,
+  .ssirc-panel,
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .hackclub-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .intro-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .intro-item:nth-child(3) {
+    border-left: none;
+  }
+
+  .intro-item:nth-child(odd) {
+    border-left: none;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .achieve-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery-grid {
+    columns: 2;
+  }
+}
+
+/* ---- 768px: tablet ---- */
+@media (max-width: 768px) {
+  .nav-links,
+  .nav-cta .btn {
+    display: none;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  .nav-cta {
+    gap: 0;
+  }
+
+  .mobile-menu {
+    position: fixed;
+    inset: 76px 0 0 0;
+    background: rgba(10, 14, 20, 0.98);
+    backdrop-filter: blur(10px);
+    z-index: 99;
+    padding: 2rem var(--gutter);
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    transform: translateY(-8px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--dur-m) var(--ease), transform var(--dur-m) var(--ease);
+  }
+
+  .mobile-menu.is-open {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .mobile-menu a {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--border);
+    color: var(--text-muted);
+  }
+
+  .mobile-menu a[aria-current="page"] {
+    color: var(--accent);
+  }
+
+  .mobile-menu .btn {
+    margin-top: 1.5rem;
+    align-self: flex-start;
+  }
+
+  .project-grid,
+  .activity-grid,
+  .event-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .role-list {
+    grid-template-columns: 1fr;
+  }
+
+  .ssirc-heading {
+    max-width: none;
+  }
+
+  .hackclub-panel {
+    padding: clamp(1.5rem, 4vw, 2rem);
+  }
+}
+
+/* ---- 425px and below: mobile ---- */
+@media (max-width: 425px) {
+  .intro-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .intro-item {
+    border-left: none !important;
+    border-top: 1px solid var(--border);
+  }
+
+  .intro-item:first-child {
+    border-top: none;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .achieve-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-grid {
+    columns: 1;
+  }
+
+  .hero-actions,
+  .contact-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn {
+    justify-content: center;
+  }
+
+  .footer-top {
+    flex-direction: column;
+  }
+
+  .footer-bottom {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+
+  .section-head {
+    align-items: flex-start;
+  }
+
+  .section-meta {
+    text-align: left;
+  }
+}
+
+/* ---- 375px ---- */
+@media (max-width: 375px) {
+  :root {
+    --gutter: 1.1rem;
+  }
+
+  .hero-name {
+    font-size: clamp(2rem, 9vw, 2.6rem);
+  }
+}
+
+/* ---- 320px: smallest supported ---- */
+@media (max-width: 320px) {
+  .btn {
+    padding: 0.8rem 1.1rem;
+    font-size: 0.85rem;
+  }
+
+  .filter-bar {
+    gap: 0.45rem;
+  }
+
+  .filter-btn {
+    padding: 0.45rem 0.85rem;
+    font-size: 0.78rem;
+  }
+}

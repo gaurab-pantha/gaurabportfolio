@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects — Gaurab Pantha</title>
+<meta name="description" content="Projects, events, and photos from Gaurab Pantha — robotics, browser extensions, Hack Club builds, and SSIRC activities.">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Projects — Gaurab Pantha">
+<meta property="og:description" content="Robotics, browser extensions, Hack Club builds, and SSIRC activities.">
+<meta property="og:image" content="assets/images/profile/gaurab.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<div class="scroll-progress" aria-hidden="true"></div>
+
+<header class="site-header">
+  <div class="container nav">
+    <a href="index.html" class="nav-logo">GAURAB<span>.</span>PANTHA</a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="index.html#work">Work</a>
+      <a href="projects.html" aria-current="page">Projects</a>
+      <a href="about.html#experience">Experience</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="contact.html" class="btn btn-ghost btn-small">Get in touch</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <nav id="mobile-menu" class="mobile-menu" aria-label="Mobile">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="index.html#work">Work</a>
+    <a href="projects.html" aria-current="page">Projects</a>
+    <a href="about.html#experience">Experience</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html" class="btn btn-primary">Get in touch</a>
+  </nav>
+</header>
+
+<main id="main">
+
+  <div class="page-header">
+    <div class="container">
+      <p class="eyebrow" data-reveal>Projects</p>
+      <h1 data-reveal>Selected work</h1>
+      <p data-reveal>A collection of things I've built, explored, and contributed to — filter by category to browse.</p>
+    </div>
+  </div>
+
+  <!-- SELECTED WORK + FILTER -->
+  <section class="section">
+    <div class="container">
+      <div class="filter-bar" role="group" aria-label="Filter projects" data-reveal>
+        <button class="filter-btn is-active" data-filter="all" aria-pressed="true">All</button>
+        <button class="filter-btn" data-filter="web" aria-pressed="false">Web</button>
+        <button class="filter-btn" data-filter="extensions" aria-pressed="false">Extensions</button>
+        <button class="filter-btn" data-filter="robotics" aria-pressed="false">Robotics</button>
+        <button class="filter-btn" data-filter="hackclub" aria-pressed="false">Hack Club</button>
+      </div>
+
+      <div class="project-grid" id="project-grid" data-reveal></div>
+    </div>
+  </section>
+
+  <!-- EVENTS -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <div>
+          <p class="eyebrow">Events</p>
+          <h2 class="section-title">Workshops, sessions &amp; competitions</h2>
+        </div>
+      </div>
+
+      <div class="event-grid" data-reveal>
+        <article class="event-card">
+          <div class="event-thumb">
+            <img src="assets/images/events/robotics.jpg" alt="Robotics workshop and competition" loading="lazy" width="1200" height="750">
+          </div>
+          <div class="event-body">
+            <p class="event-cat">Robotics</p>
+            <h3 class="event-title">Robotics Workshop &amp; Competition</h3>
+            <p class="event-desc">Robo Race, Robo Soccer, and Robo Sumo — hands-on robotics competition and workshop at SSIRC.</p>
+            <span class="event-date">Date to be added</span>
+          </div>
+        </article>
+
+        <article class="event-card">
+          <div class="event-thumb">
+            <img src="assets/images/events/aviation.jpg" alt="Aviation program activities" loading="lazy" width="1200" height="750">
+          </div>
+          <div class="event-body">
+            <p class="event-cat">Aviation</p>
+            <h3 class="event-title">Aviation Program</h3>
+            <p class="event-desc">Small aircraft body construction, drone flying, and hands-on aviation activities.</p>
+            <span class="event-date">Date to be added</span>
+          </div>
+        </article>
+
+        <article class="event-card">
+          <div class="event-thumb">
+            <img src="assets/images/events/cad-session.jpg" alt="CAD design session" loading="lazy" width="1200" height="750">
+          </div>
+          <div class="event-body">
+            <p class="event-cat">CAD Design</p>
+            <h3 class="event-title">CAD Design Session</h3>
+            <p class="event-desc">A CAD design session held with Hack Club and PrynixDevs.</p>
+            <span class="event-date">Date to be added</span>
+          </div>
+        </article>
+
+        <article class="event-card">
+          <div class="event-thumb">
+            <img src="assets/images/events/workshop.jpg" alt="Advance robotics training" loading="lazy" width="1200" height="750">
+          </div>
+          <div class="event-body">
+            <p class="event-cat">Robotics</p>
+            <h3 class="event-title">Advance Robotics Training</h3>
+            <p class="event-desc">Hands-on robotics and battle-bot related training and practice.</p>
+            <span class="event-date">Date to be added</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <div>
+          <p class="eyebrow">Gallery</p>
+          <h2 class="section-title">Moments from SSIRC and beyond</h2>
+        </div>
+      </div>
+
+      <div class="gallery-grid" data-reveal>
+        <figure class="gallery-item">
+          <img src="assets/images/gallery/gallery-01.jpg" alt="SSIRC robotics workshop moment" loading="lazy">
+          <figcaption class="gallery-cap">SSIRC &middot; Robotics workshop</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="assets/images/gallery/gallery-02.jpg" alt="School event moment" loading="lazy">
+          <figcaption class="gallery-cap">School event</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="assets/images/gallery/gallery-03.jpg" alt="Aviation activity moment" loading="lazy">
+          <figcaption class="gallery-cap">Aviation activity</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="assets/images/gallery/gallery-04.jpg" alt="CAD session moment" loading="lazy">
+          <figcaption class="gallery-cap">CAD design session</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="assets/images/gallery/gallery-05.jpg" alt="Team activity moment" loading="lazy">
+          <figcaption class="gallery-cap">Team &amp; behind-the-scenes</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">Gaurab Pantha</div>
+        <div class="footer-tagline">Design &middot; Technology &middot; Learning</div>
+      </div>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="index.html#work">Work</a>
+        <a href="projects.html">Projects</a>
+        <a href="about.html#experience">Experience</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="footer-social">
+        <a href="#" aria-label="GitHub"><img src="assets/icons/github.svg" alt="" width="16" height="16"></a>
+        <a href="#" aria-label="Instagram"><img src="assets/icons/instagram.svg" alt="" width="16" height="16"></a>
+        <a href="#" aria-label="LinkedIn"><img src="assets/icons/linkedin.svg" alt="" width="16" height="16"></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Gaurab Pantha. All rights reserved.</span>
+      <a href="#main" class="back-to-top">Back to top &uarr;</a>
+    </div>
+  </div>
+</footer>
+
+<div class="lightbox" aria-hidden="true">
+  <div class="lightbox-inner">
+    <button class="lightbox-close" aria-label="Close image">&times;</button>
+    <img src="" alt="">
+    <p class="lightbox-cap"></p>
+  </div>
+</div>
+
+<script src="js/projects.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
