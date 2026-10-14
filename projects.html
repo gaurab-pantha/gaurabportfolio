@@ -9,10 +9,23 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="Projects — Gaurab Pantha">
 <meta property="og:description" content="Robotics, browser extensions, Hack Club builds, and SSIRC activities.">
-<meta property="og:image" content="assets/images/profile/gaurab.jpg">
+<meta property="og:url" content="https://gaurabportfolio.gpantha99.workers.dev/projects.html">
+<meta property="og:site_name" content="Gaurab Pantha">
+<meta property="og:image" content="https://gaurabportfolio.gpantha99.workers.dev/assets/images/og-card.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Gaurab Pantha — Student, designer and builder">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://gaurabportfolio.gpantha99.workers.dev/assets/images/og-card.jpg">
 
+<link rel="canonical" href="https://gaurabportfolio.gpantha99.workers.dev/projects.html">
+<meta name="theme-color" content="#0a0e14">
+<meta name="color-scheme" content="dark">
+<script>document.documentElement.classList.add("js")</script>
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.ico" sizes="48x48">
+<link rel="icon" href="favicon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
@@ -20,6 +33,8 @@
 <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
+
+<a href="#main" class="skip-link">Skip to content</a>
 
 <div class="scroll-progress" aria-hidden="true"></div>
 
@@ -52,7 +67,7 @@
   </nav>
 </header>
 
-<main id="main">
+<main id="main" tabindex="-1">
 
   <div class="page-header">
     <div class="container">
@@ -67,13 +82,14 @@
     <div class="container">
       <div class="filter-bar" role="group" aria-label="Filter projects" data-reveal>
         <button class="filter-btn is-active" data-filter="all" aria-pressed="true">All</button>
-        <button class="filter-btn" data-filter="web" aria-pressed="false">Web</button>
         <button class="filter-btn" data-filter="extensions" aria-pressed="false">Extensions</button>
         <button class="filter-btn" data-filter="robotics" aria-pressed="false">Robotics</button>
         <button class="filter-btn" data-filter="hackclub" aria-pressed="false">Hack Club</button>
       </div>
 
-      <div class="project-grid" id="project-grid" data-reveal></div>
+      <div class="project-grid" id="project-grid" data-reveal>
+        <noscript><p class="section-sub">Turn on JavaScript to browse projects.</p></noscript>
+      </div>
     </div>
   </section>
 
@@ -90,49 +106,45 @@
       <div class="event-grid" data-reveal>
         <article class="event-card">
           <div class="event-thumb">
-            <img src="assets/images/events/robotics.jpg" alt="Robotics workshop and competition" loading="lazy" width="1200" height="750">
+            <img width="1400" height="1050" src="assets/images/events/robotics.jpg" alt="Robotics workshop and competition" loading="lazy">
           </div>
           <div class="event-body">
             <p class="event-cat">Robotics</p>
             <h3 class="event-title">Robotics Workshop &amp; Competition</h3>
             <p class="event-desc">Robo Race, Robo Soccer, and Robo Sumo — hands-on robotics competition and workshop at SSIRC.</p>
-            <span class="event-date">Date to be added</span>
           </div>
         </article>
 
         <article class="event-card">
           <div class="event-thumb">
-            <img src="assets/images/events/aviation.jpg" alt="Aviation program activities" loading="lazy" width="1200" height="750">
+            <img width="720" height="960" src="assets/images/events/aviation.jpg" alt="Aviation program activities" loading="lazy">
           </div>
           <div class="event-body">
             <p class="event-cat">Aviation</p>
             <h3 class="event-title">Aviation Program</h3>
             <p class="event-desc">Small aircraft body construction, drone flying, and hands-on aviation activities.</p>
-            <span class="event-date">Date to be added</span>
           </div>
         </article>
 
         <article class="event-card">
           <div class="event-thumb">
-            <img src="assets/images/events/cad-session.jpg" alt="CAD design session" loading="lazy" width="1200" height="750">
+            <img width="1400" height="1050" src="assets/images/events/cad-session.jpg" alt="CAD design session" loading="lazy">
           </div>
           <div class="event-body">
             <p class="event-cat">CAD Design</p>
             <h3 class="event-title">CAD Design Session</h3>
             <p class="event-desc">A CAD design session held with Hack Club and PrynixDevs.</p>
-            <span class="event-date">Date to be added</span>
           </div>
         </article>
 
         <article class="event-card">
           <div class="event-thumb">
-            <img src="assets/images/events/workshop.jpg" alt="Advance robotics training" loading="lazy" width="1200" height="750">
+            <img width="1400" height="1050" src="assets/images/events/workshop.jpg" alt="Advance robotics training" loading="lazy">
           </div>
           <div class="event-body">
             <p class="event-cat">Robotics</p>
             <h3 class="event-title">Advance Robotics Training</h3>
             <p class="event-desc">Hands-on robotics and battle-bot related training and practice.</p>
-            <span class="event-date">Date to be added</span>
           </div>
         </article>
       </div>
@@ -151,23 +163,23 @@
 
       <div class="gallery-grid" data-reveal>
         <figure class="gallery-item">
-          <img src="assets/images/gallery/gallery-01.jpg" alt="SSIRC robotics workshop moment" loading="lazy">
+          <img width="720" height="960" src="assets/images/gallery/gallery-01.jpg" alt="SSIRC robotics workshop moment" loading="lazy">
           <figcaption class="gallery-cap">SSIRC &middot; Robotics workshop</figcaption>
         </figure>
         <figure class="gallery-item">
-          <img src="assets/images/gallery/gallery-02.jpg" alt="School event moment" loading="lazy">
+          <img width="1400" height="1050" src="assets/images/gallery/gallery-02.jpg" alt="School event moment" loading="lazy">
           <figcaption class="gallery-cap">School event</figcaption>
         </figure>
         <figure class="gallery-item">
-          <img src="assets/images/gallery/gallery-03.jpg" alt="Aviation activity moment" loading="lazy">
+          <img width="1400" height="1050" src="assets/images/gallery/gallery-03.jpg" alt="Aviation activity moment" loading="lazy">
           <figcaption class="gallery-cap">Aviation activity</figcaption>
         </figure>
         <figure class="gallery-item">
-          <img src="assets/images/gallery/gallery-04.jpg" alt="CAD session moment" loading="lazy">
+          <img width="1400" height="1050" src="assets/images/gallery/gallery-04.jpg" alt="CAD session moment" loading="lazy">
           <figcaption class="gallery-cap">CAD design session</figcaption>
         </figure>
         <figure class="gallery-item">
-          <img src="assets/images/gallery/gallery-05.jpg" alt="Team activity moment" loading="lazy">
+          <img width="1050" height="1400" src="assets/images/gallery/gallery-05.jpg" alt="Team activity moment" loading="lazy">
           <figcaption class="gallery-cap">Team &amp; behind-the-scenes</figcaption>
         </figure>
       </div>
@@ -192,9 +204,7 @@
         <a href="contact.html">Contact</a>
       </nav>
       <div class="footer-social">
-        <a href="#" aria-label="GitHub"><img src="assets/icons/github.svg" alt="" width="16" height="16"></a>
-        <a href="#" aria-label="Instagram"><img src="assets/icons/instagram.svg" alt="" width="16" height="16"></a>
-        <a href="#" aria-label="LinkedIn"><img src="assets/icons/linkedin.svg" alt="" width="16" height="16"></a>
+        <a href="https://github.com/gaurab-pantha" target="_blank" rel="noopener" aria-label="GitHub (opens in a new tab)"><img src="assets/icons/github.svg" alt="" width="18" height="18"></a>
       </div>
     </div>
     <div class="footer-bottom">
@@ -204,15 +214,16 @@
   </div>
 </footer>
 
-<div class="lightbox" aria-hidden="true">
+<div class="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer" aria-hidden="true">
   <div class="lightbox-inner">
     <button class="lightbox-close" aria-label="Close image">&times;</button>
-    <img src="" alt="">
+    <img alt="">
     <p class="lightbox-cap"></p>
   </div>
 </div>
 
 <script src="js/projects.js"></script>
+<script src="js/config.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

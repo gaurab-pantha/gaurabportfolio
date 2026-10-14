@@ -12,8 +12,8 @@
   --border: rgba(255, 255, 255, 0.09);
   --border-strong: rgba(255, 255, 255, 0.16);
   --text: #edf0f4;
-  --text-muted: #8b93a3;
-  --text-faint: #565f6f;
+  --text-muted: #a3abb9;
+  --text-faint: #858e9f;
   --accent: #4d8dff;
   --accent-soft: rgba(77, 141, 255, 0.14);
   --accent-line: rgba(77, 141, 255, 0.4);
@@ -44,6 +44,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 96px;
   -webkit-text-size-adjust: 100%;
 }
 
@@ -672,11 +673,13 @@ textarea:focus-visible,
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: clamp(1.25rem, 2.5vw, 1.75rem);
 }
 
 .project-card {
+  display: flex;
+  flex-direction: column;
   border: 1px solid var(--border);
   border-radius: var(--radius-m);
   overflow: hidden;
@@ -690,6 +693,7 @@ textarea:focus-visible,
 }
 
 .project-thumb {
+  display: block;
   aspect-ratio: 4 / 3;
   overflow: hidden;
   background: var(--bg-elev);
@@ -708,13 +712,16 @@ textarea:focus-visible,
 }
 
 .project-body {
-  padding: 1.5rem 1.6rem 1.75rem;
+  padding: 1.4rem 1.5rem 1.6rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .project-top {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   margin-bottom: 0.9rem;
 }
 
@@ -760,6 +767,8 @@ textarea:focus-visible,
 }
 
 .project-link {
+  margin-top: auto;
+  align-self: flex-start;
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
@@ -1383,8 +1392,8 @@ textarea:focus-visible,
 }
 
 .footer-social a {
-  width: 36px;
-  height: 36px;
+  width: 40px;
+  height: 40px;
   border: 1px solid var(--border-strong);
   border-radius: 50%;
   display: flex;
@@ -1439,13 +1448,13 @@ textarea:focus-visible,
 }
 
 /* ---- Reveal animation ---- */
-[data-reveal] {
+html.js [data-reveal] {
   opacity: 0;
   transform: translateY(16px);
   transition: opacity 640ms var(--ease), transform 640ms var(--ease);
 }
 
-[data-reveal].is-visible {
+html.js [data-reveal].is-visible {
   opacity: 1;
   transform: translateY(0);
 }
@@ -1490,4 +1499,470 @@ textarea:focus-visible,
   border-radius: var(--radius-s);
   display: inline-block;
   margin-top: 0.75rem;
+}
+
+
+/* ==========================================================================
+   FIXES & ADDITIONS
+   ========================================================================== */
+
+/* Skip link: visible only when focused by keyboard */
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  z-index: 300;
+  padding: 0.7rem 1.1rem;
+  background: var(--accent);
+  color: #06090e;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-radius: var(--radius-s);
+  transition: top var(--dur-s) var(--ease);
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+main:focus {
+  outline: none;
+}
+
+/* Project link that isn't published yet */
+.project-link.is-soon {
+  color: var(--text-faint);
+  border-bottom: 1px dashed var(--border-strong);
+  cursor: default;
+}
+
+.project-link.is-soon:hover {
+  color: var(--text-faint);
+  border-color: var(--border-strong);
+}
+
+/* Footer / contact icons come from <img>, so they keep their own colour */
+.footer-social img {
+  width: 18px;
+  height: 18px;
+  opacity: 0.85;
+  transition: opacity var(--dur-s) var(--ease);
+}
+
+.footer-social a:hover img {
+  opacity: 1;
+}
+
+.contact-link-label img.icon {
+  flex: none;
+}
+
+/* Contact fallback (until an email is added in js/config.js) */
+.contact-fallback {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-m);
+  background: var(--surface);
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+}
+
+.contact-fallback[hidden],
+#contact-form[hidden],
+.contact-link-row[hidden] {
+  display: none;
+}
+
+.contact-fallback-title {
+  font-size: clamp(1.25rem, 2.4vw, 1.6rem);
+  max-width: 24ch;
+}
+
+.contact-fallback p {
+  margin: 0.9rem 0 1.6rem;
+  color: var(--text-muted);
+  max-width: 46ch;
+}
+
+.about-side-title {
+  margin-bottom: 1.25rem;
+}
+
+/* Keep long words/emails from overflowing on small screens */
+.contact-link-value {
+  overflow-wrap: anywhere;
+  text-align: right;
+}
+
+.contact-link-row {
+  gap: 1rem;
+}
+
+/* Hide the closed mobile menu from keyboard and screen readers */
+@media (max-width: 768px) {
+  .mobile-menu {
+    visibility: hidden;
+  }
+  .mobile-menu.is-open {
+    visibility: visible;
+  }
+}
+
+/* Slightly stronger hover on cards that are actually links */
+.project-card:has(a.project-link:hover) {
+  border-color: var(--accent-line);
+}
+
+
+/* ==========================================================================
+   POLISH — visual refinements (ambient glow, motion, cards, gallery)
+   ========================================================================== */
+
+:root {
+  --accent-2: #8db6ff;
+  --glow: 0 18px 44px -20px rgba(77, 141, 255, 0.45);
+}
+
+/* Soft ambient glow behind the whole site */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(900px 520px at 88% -8%, rgba(77, 141, 255, 0.12), transparent 62%),
+    radial-gradient(700px 480px at -6% 38%, rgba(77, 141, 255, 0.06), transparent 60%);
+}
+
+/* Hero: gradient headline + glowing portrait */
+.hero-statement em {
+  background: linear-gradient(90deg, #ffffff 0%, var(--accent-2) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: var(--text);
+}
+
+.hero-portrait {
+  box-shadow: 0 30px 80px -30px rgba(77, 141, 255, 0.35);
+}
+
+.hero-visual::before {
+  content: "";
+  position: absolute;
+  inset: -12px;
+  border: 1px solid var(--accent-line);
+  border-radius: calc(var(--radius-m) + 6px);
+  background: linear-gradient(160deg, rgba(77, 141, 255, 0.08), transparent 55%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-portrait {
+  z-index: 1;
+}
+
+/* Section titles get a short accent rule */
+.page-header h1,
+.section-title {
+  text-wrap: balance;
+}
+
+/* Buttons: subtle glow on primary */
+.btn-primary {
+  box-shadow: 0 8px 24px -10px rgba(77, 141, 255, 0.7);
+}
+
+.btn-primary:hover {
+  box-shadow: 0 12px 30px -10px rgba(77, 141, 255, 0.85);
+}
+
+/* Cards: accent line + glow on hover */
+.project-card,
+.event-card,
+.activity-card,
+.achieve-card {
+  position: relative;
+}
+
+.project-card::after,
+.event-card::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent), transparent);
+  opacity: 0;
+  transition: opacity var(--dur-m) var(--ease);
+  z-index: 2;
+}
+
+.project-card:hover,
+.event-card:hover {
+  box-shadow: var(--glow);
+}
+
+.project-card:hover::after,
+.event-card:hover::after {
+  opacity: 1;
+}
+
+.event-card {
+  transition: border-color var(--dur-m) var(--ease), transform var(--dur-m) var(--ease), box-shadow var(--dur-m) var(--ease);
+}
+
+.event-card:hover {
+  border-color: var(--border-strong);
+  transform: translateY(-3px);
+}
+
+.event-thumb img {
+  transition: transform var(--dur-m) var(--ease);
+}
+
+.event-card:hover .event-thumb img {
+  transform: scale(1.04);
+}
+
+.activity-card {
+  transition: border-color var(--dur-m) var(--ease), background var(--dur-m) var(--ease);
+}
+
+.activity-card:hover {
+  border-color: var(--accent-line);
+  background: var(--surface-2);
+}
+
+/* Cards re-animate in when the filter changes */
+@keyframes cardIn {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.project-card.is-entering {
+  animation: cardIn 520ms var(--ease) both;
+  animation-delay: calc(var(--i, 0) * 70ms);
+}
+
+/* Filter buttons: counts + clearer active state */
+.filter-btn {
+  display: inline-flex;
+  align-items: center;
+}
+
+.filter-btn .count {
+  margin-left: 0.5rem;
+  font-size: 0.72rem;
+  opacity: 0.6;
+  font-variant-numeric: tabular-nums;
+}
+
+.filter-btn.is-active {
+  box-shadow: 0 6px 20px -8px rgba(77, 141, 255, 0.8);
+}
+
+.filter-btn.is-active .count {
+  opacity: 0.75;
+}
+
+/* Tags: a touch of colour on hover */
+.tag {
+  transition: border-color var(--dur-s) var(--ease), color var(--dur-s) var(--ease);
+}
+
+.project-card:hover .tag {
+  border-color: var(--accent-line);
+  color: var(--text);
+}
+
+/* Event dates: hide the empty slot, style real ones as a pill */
+.event-date {
+  padding: 0.2rem 0.6rem;
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+}
+
+.event-date:empty {
+  display: none;
+}
+
+/* Gallery: caption always visible on touch screens (no hover there) */
+@media (hover: none) {
+  .gallery-cap {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.gallery-item:focus-visible {
+  outline-offset: -3px;
+}
+
+/* Lightbox: prev / next + counter */
+.lightbox-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--border-strong);
+  border-radius: 50%;
+  background: rgba(10, 14, 20, 0.7);
+  color: var(--text);
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color var(--dur-s) var(--ease), color var(--dur-s) var(--ease);
+}
+
+.lightbox-nav:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.lightbox-nav--prev { left: -0.5rem; }
+.lightbox-nav--next { right: -0.5rem; }
+
+.lightbox-count {
+  text-align: center;
+  margin-top: 0.35rem;
+  font-size: 0.75rem;
+  color: var(--text-faint);
+  letter-spacing: 0.08em;
+}
+
+@media (max-width: 600px) {
+  .lightbox-nav--prev { left: 0.25rem; }
+  .lightbox-nav--next { right: 0.25rem; }
+  .lightbox-nav { background: rgba(10, 14, 20, 0.85); }
+}
+
+/* Back to top: pill that sits quietly in the footer */
+.back-to-top {
+  padding: 0.35rem 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+}
+
+/* Footer divider glow */
+.site-footer {
+  position: relative;
+}
+
+.site-footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(560px, 80%);
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent-line), transparent);
+}
+
+/* Print: clean, light output */
+@media print {
+  body::before, .scroll-progress, .site-header, .lightbox { display: none !important; }
+  html.js [data-reveal] { opacity: 1 !important; transform: none !important; }
+}
+
+/* Fix: gallery photos were stretched (height attribute vs width:100%) */
+.gallery-item img {
+  height: auto;
+}
+
+/* Fix: <figure> default side margins made gallery photos narrow and misaligned */
+.gallery-item {
+  margin-inline: 0;
+}
+
+/* ==========================================================================
+   CONTACT & SOCIAL — hero chips, contact card refinements
+   ========================================================================== */
+.hero-socials {
+  margin-top: 1.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.hero-socials a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 0.85rem 0.45rem 0.7rem;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.02);
+  transition: color var(--dur-s) var(--ease), border-color var(--dur-s) var(--ease), transform var(--dur-s) var(--ease), background var(--dur-s) var(--ease);
+}
+
+.hero-socials a:hover {
+  color: var(--text);
+  border-color: var(--accent-line);
+  background: var(--accent-soft);
+  transform: translateY(-2px);
+}
+
+.hero-socials img {
+  width: 16px;
+  height: 16px;
+}
+
+.contact-links {
+  background: var(--surface);
+  box-shadow: var(--glow);
+}
+
+.contact-link-row:hover .contact-link-value {
+  color: var(--accent);
+}
+
+.contact-link-row {
+  position: relative;
+}
+
+.contact-link-row::after {
+  content: "\2197";
+  color: var(--text-faint);
+  font-size: 0.9rem;
+  transition: transform var(--dur-s) var(--ease), color var(--dur-s) var(--ease);
+}
+
+.contact-link-row:hover::after {
+  color: var(--accent);
+  transform: translate(2px, -2px);
+}
+
+.contact-link-value {
+  margin-left: auto;
+}
+
+.contact-link-row[hidden]::after {
+  display: none;
+}
+
+.footer-social {
+  flex-wrap: wrap;
+}
+
+.footer-social a:hover {
+  background: var(--accent-soft);
+  transform: translateY(-2px);
+}
+
+.footer-social a {
+  transition: color var(--dur-s) var(--ease), border-color var(--dur-s) var(--ease), background var(--dur-s) var(--ease), transform var(--dur-s) var(--ease);
+}
+
+/* Phones: keep the portrait's frame inside the screen */
+@media (max-width: 768px) {
+  .hero-visual::before {
+    inset: -8px;
+  }
 }

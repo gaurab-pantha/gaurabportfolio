@@ -9,10 +9,23 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="Contact — Gaurab Pantha">
 <meta property="og:description" content="Have an idea, project, or collaboration? Get in touch with Gaurab Pantha.">
-<meta property="og:image" content="assets/images/profile/gaurab.jpg">
+<meta property="og:url" content="https://gaurabportfolio.gpantha99.workers.dev/contact.html">
+<meta property="og:site_name" content="Gaurab Pantha">
+<meta property="og:image" content="https://gaurabportfolio.gpantha99.workers.dev/assets/images/og-card.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Gaurab Pantha — Student, designer and builder">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://gaurabportfolio.gpantha99.workers.dev/assets/images/og-card.jpg">
 
+<link rel="canonical" href="https://gaurabportfolio.gpantha99.workers.dev/contact.html">
+<meta name="theme-color" content="#0a0e14">
+<meta name="color-scheme" content="dark">
+<script>document.documentElement.classList.add("js")</script>
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.ico" sizes="48x48">
+<link rel="icon" href="favicon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
@@ -20,6 +33,8 @@
 <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
+
+<a href="#main" class="skip-link">Skip to content</a>
 
 <div class="scroll-progress" aria-hidden="true"></div>
 
@@ -52,7 +67,7 @@
   </nav>
 </header>
 
-<main id="main">
+<main id="main" tabindex="-1">
 
   <div class="page-header">
     <div class="container">
@@ -65,14 +80,16 @@
   <section class="section contact-section">
     <div class="container contact-layout">
       <div data-reveal>
-        <p class="about-side-title" style="margin-bottom:1.25rem;">Send a message</p>
-        <form id="contact-form" action="#" method="post">
+        <p class="about-side-title">Send a message</p>
+
+        <!-- Shown automatically once an email is added in js/config.js -->
+        <form id="contact-form" hidden novalidate>
           <div class="form-field">
             <label for="name">Name</label>
             <input type="text" id="name" name="name" required autocomplete="name">
           </div>
           <div class="form-field">
-            <label for="email">Email</label>
+            <label for="email">Your email</label>
             <input type="email" id="email" name="email" required autocomplete="email">
           </div>
           <div class="form-field">
@@ -80,43 +97,55 @@
             <textarea id="message" name="message" required></textarea>
           </div>
           <button type="submit" class="btn btn-primary">Send message</button>
-          <p class="form-note">This form isn't connected to an inbox yet — replace the placeholder email below with a real address, or wire this form up to a form service.</p>
+          <p class="form-note" id="form-status" role="status" aria-live="polite">Opens your email app with the message ready to send.</p>
         </form>
+
+        <div id="contact-fallback" class="contact-fallback">
+          <h2 class="contact-fallback-title">The easiest way to reach me is GitHub.</h2>
+          <p>Open an issue or a discussion on any of my repositories, or send a message through my profile. I'll reply as soon as I can.</p>
+          <a class="btn btn-primary" href="https://github.com/gaurab-pantha" target="_blank" rel="noopener">Visit my GitHub</a>
+        </div>
       </div>
 
       <div data-reveal>
-        <p class="about-side-title" style="margin-bottom:1.25rem;">Reach me directly</p>
-        <div class="contact-links">
-          <a class="contact-link-row" href="mailto:hello@example.com">
+        <p class="about-side-title">Find me online</p>
+        <div class="contact-links" id="contact-links">
+          <a class="contact-link-row" id="link-email" href="#" hidden>
             <span class="contact-link-label">
-              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 6 8 7 8-7"/></svg>
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 6 8 7 8-7"/></svg>
               Email
             </span>
-            <span class="contact-link-value">gpantha99@gmail.com</span>
+            <span class="contact-link-value"></span>
           </a>
-          <a class="contact-link-row" href="https://github.com/" target="_blank" rel="noopener">
+          <a class="contact-link-row" href="https://github.com/gaurab-pantha" target="_blank" rel="noopener">
             <span class="contact-link-label">
-              <img class="icon" src="assets/icons/github.svg" alt="">
+              <img class="icon" src="assets/icons/github.svg" alt="" width="18" height="18">
               GitHub
             </span>
-            <span class="contact-link-value">https://github.com/gaurab-pantha//&mdash;</span>
+            <span class="contact-link-value">github.com/gaurab-pantha</span>
           </a>
-          <a class="contact-link-row" href="https://instagram.com/" target="_blank" rel="noopener">
+          <a class="contact-link-row" id="link-instagram" href="#" target="_blank" rel="noopener" hidden>
             <span class="contact-link-label">
-              <img class="icon" src="assets/icons/instagram.svg" alt="">
+              <img class="icon" src="assets/icons/instagram.svg" alt="" width="18" height="18">
               Instagram
             </span>
-            <span class="contact-link-value">@myselfgaurav99&mdash;</span>
+            <span class="contact-link-value"></span>
           </a>
-          <a class="contact-link-row" href="https://linkedin.com/" target="_blank" rel="noopener">
+          <a class="contact-link-row" id="link-facebook" href="#" target="_blank" rel="noopener" hidden>
             <span class="contact-link-label">
-              <img class="icon" src="assets/icons/linkedin.svg" alt="">
+              <img class="icon" src="assets/icons/facebook.svg" alt="" width="18" height="18">
+              Facebook
+            </span>
+            <span class="contact-link-value"></span>
+          </a>
+          <a class="contact-link-row" id="link-linkedin" href="#" target="_blank" rel="noopener" hidden>
+            <span class="contact-link-label">
+              <img class="icon" src="assets/icons/linkedin.svg" alt="" width="18" height="18">
               LinkedIn
             </span>
-            <span class="contact-link-value">https://www.linkedin.com/in/gaurav-pantha-a7410b392/&mdash;</span>
+            <span class="contact-link-value"></span>
           </a>
         </div>
-        <p class="placeholder-note">Placeholder contact details — replace with your real email and profile links.</p>
       </div>
     </div>
   </section>
@@ -139,9 +168,7 @@
         <a href="contact.html">Contact</a>
       </nav>
       <div class="footer-social">
-        <a href="#" aria-label="GitHub"><img src="assets/icons/github.svg" alt="" width="16" height="16"></a>
-        <a href="#" aria-label="Instagram"><img src="assets/icons/instagram.svg" alt="" width="16" height="16"></a>
-        <a href="#" aria-label="LinkedIn"><img src="assets/icons/linkedin.svg" alt="" width="16" height="16"></a>
+        <a href="https://github.com/gaurab-pantha" target="_blank" rel="noopener" aria-label="GitHub (opens in a new tab)"><img src="assets/icons/github.svg" alt="" width="18" height="18"></a>
       </div>
     </div>
     <div class="footer-bottom">
@@ -151,12 +178,8 @@
   </div>
 </footer>
 
+<script src="js/config.js"></script>
 <script src="js/main.js"></script>
-<script>
-  document.getElementById("contact-form").addEventListener("submit", function (e) {
-    e.preventDefault();
-    alert("This form is a placeholder — connect it to an email service (e.g. Formspree) or set up a mailto link before going live.");
-  });
-</script>
+<script src="js/contact.js"></script>
 </body>
 </html>

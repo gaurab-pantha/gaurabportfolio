@@ -1,68 +1,79 @@
-# Gaurab Pantha — Personal Portfolio
+# Gaurab Pantha — Portfolio
 
-A premium, minimal personal portfolio for Gaurab Pantha — Grade 10 student, graphic designer, and technology/robotics enthusiast. Built with plain HTML, CSS, and vanilla JavaScript (no build step, no frameworks).
+Static site (HTML, CSS, JavaScript). No build step. Live at https://gaurabportfolio.gpantha99.workers.dev
+
+## Update the site
+Edit files in GitHub (or upload new ones) and click **Commit changes**. Cloudflare redeploys within a minute or two.
+
+## 1. Add your email, Instagram and LinkedIn
+Open `js/config.js` and fill in the values. Anything left as `""` stays hidden.
+Adding an email also turns on the contact form (it opens the visitor's email app with the message ready).
+
+## 2. Add project links
+Open `js/projects.js`. For each project set `link: "https://..."`.
+While `link` is `""` the card shows "Link coming soon".
+The three project cards on the home page are in `index.html`: replace
+`<span class="project-link is-soon">Link coming soon</span>` with
+`<a class="project-link" href="https://..." target="_blank" rel="noopener">View project <span class="arrow" aria-hidden="true">&rarr;</span></a>`.
+
+## 3. Add a new project
+Append an object to the `PROJECTS` array in `js/projects.js` and add a 4:3 image (about 1200x900) in `assets/images/projects/`.
+
+## 4. Event dates
+Under each event card in `projects.html`, add `<span class="event-date">12 March 2026</span>` after the description.
+
+## 5. Adding achievements
+The Achievements section is hidden in `about.html` until there is something real to show.
+Paste this block back in where the `ACHIEVEMENTS` comment is, and edit the text:
+
+```html
+<!-- ACHIEVEMENTS -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <div>
+          <p class="eyebrow">Achievements</p>
+          <h2 class="section-title">Recognition along the way</h2>
+        </div>
+        <p class="section-meta">Updated as things happen — no placeholders passed off as real.</p>
+      </div>
+
+      <div class="achieve-grid" data-reveal>
+        <div class="achieve-card">
+          <p class="achieve-cat">SSIRC Leadership</p>
+          <p class="achieve-body">Serving as Marketing, Graphic Design, Media &amp; Documentation, and Administrator Head at SSIRC.</p>
+        </div>
+        <div class="achieve-card is-empty">
+          <p class="achieve-cat">Robotics</p>
+          <p class="achieve-body">To be added — competition results and certificates will appear here.</p>
+        </div>
+        <div class="achieve-card is-empty">
+          <p class="achieve-cat">Hack Club</p>
+          <p class="achieve-body">To be added — project milestones and recognitions will appear here.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+```
+
+## If you change the web address
+Replace `https://gaurabportfolio.gpantha99.workers.dev` in all four `.html` files, `sitemap.xml`, `robots.txt`
+and `assets/images/og-card.jpg` (the share preview image shows the address in small text).
 
 ## Structure
-
 ```
-gaurab-portfolio/
-├── index.html          Home — hero, intro, what I do, selected work preview, SSIRC teaser, contact CTA
-├── about.html           About, skills, learning journey, SSIRC experience, Hack Club, achievements
-├── projects.html        Full project grid with filters, events, gallery + lightbox
-├── contact.html         Contact form and links
-├── README.md
-├── favicon.svg
-├── robots.txt
-├── css/
-│   ├── style.css        Design tokens, base styles, components
-│   └── responsive.css   Breakpoint overrides (1280 / 1024 / 768 / 425 / 375 / 320)
-├── js/
-│   ├── main.js           Navigation, scroll effects, reveal animation, lightbox
-│   └── projects.js       Project data + working filter system
-└── assets/
-    ├── images/
-    │   ├── profile/gaurab.jpg
-    │   ├── projects/ (esp32-car, reminder, site-blocker, dark-mode, stardance, 3am, beest)
-    │   ├── events/ (robotics, aviation, cad-session, workshop)
-    │   └── gallery/ (gallery-01 to 05)
-    └── icons/ (github, instagram, linkedin)
+index.html  about.html  projects.html  contact.html
+css/style.css  css/responsive.css
+js/config.js (your details)  js/main.js  js/projects.js  js/contact.js
+assets/images/  assets/icons/
+favicon.svg  robots.txt  sitemap.xml  _headers
 ```
 
-## Running it
+## Latest polish
+- Filter buttons show project counts, and `projects.html#robotics` opens straight into a filter.
+- Gallery viewer: previous/next buttons, arrow keys and swipe.
+- Fixed stretched/inset gallery photos, hover-only captions on touch screens, and added `404.html`.
 
-No build tools needed. Open `index.html` directly in a browser, or serve the folder locally:
-
-```
-npx serve .
-```
-
-## Design notes
-
-- Dark navy theme with a restrained electric-blue accent, defined as CSS variables in `css/style.css` (`:root`) so the whole palette can be changed in one place.
-- Typography: **Space Grotesk** for display/headings, **Inter** for body text, loaded from Google Fonts.
-- Navigation: "Work" (on the homepage) and "Projects" (dedicated page) are both in the nav per the brief — "Work" scrolls to the homepage preview, "Projects" opens the full filterable grid. "Experience" links to the SSIRC section on the About page. Adjust in the `<nav>` markup in each file if you'd rather structure it differently.
-- Project filtering is real, driven by `js/projects.js` — no project currently uses the "Web" filter since no web project was specified; add one by appending an object with `filter: "web"`.
-- Gallery uses a CSS column masonry layout with a fully keyboard-accessible lightbox (Escape to close, click outside to close).
-- Respects `prefers-reduced-motion` throughout.
-
-## What you need to replace before publishing
-
-1. **Profile photo** — swap `assets/images/profile/gaurab.jpg` for a real portrait (same filename, ideally a 4:5 portrait crop).
-2. **Project images** — replace the seven placeholders in `assets/images/projects/` with real screenshots/photos of ESP32 Bluetooth Car, Reminder, Site Blocker, Dark Mode, Stardance, 3AM, and Beest.
-3. **Event photos** — replace the four placeholders in `assets/images/events/`.
-4. **Gallery photos** — replace `gallery-01.jpg` through `gallery-05.jpg` with real SSIRC/robotics/event photos. Add more by copying the `<figure class="gallery-item">` block in `projects.html`.
-5. **Project links** — every "View project" button currently points to `#`. Update the `link` field in `js/projects.js` (and the matching preview cards in `index.html`) with real GitHub repo or live links.
-6. **Contact details** — `contact.html` uses placeholder values (`hello@example.com`, empty GitHub/Instagram/LinkedIn URLs). Replace with your real email and profile links — do not use a school/organization email unless it's actually yours.
-7. **Contact form** — the form currently just shows an alert on submit. Wire it to a real service (Formspree, EmailJS, a backend endpoint) or replace it with a `mailto:` link if you'd rather keep it simple.
-8. **Achievements** — `about.html` has two placeholder achievement cards marked "to be added." Fill these in only with genuine, verifiable achievements.
-9. **Dates** — event cards on `projects.html` say "Date to be added." Fill in real dates when known.
-10. **robots.txt / Open Graph URLs** — update the sitemap and `og:url` once the site has a real domain.
-
-## Accessibility & performance checklist (already in place)
-
-- Semantic HTML, landmark elements, and a logical heading hierarchy.
-- All images have descriptive `alt` text (replace with more specific text once real photos are in).
-- Keyboard-operable navigation, mobile menu (Escape to close, closes on link click), and lightbox.
-- Visible focus states on all interactive elements.
-- `loading="lazy"` on below-the-fold images.
-- No external dependencies beyond Google Fonts — fast by default.
+## Contact details
+Email, GitHub, Instagram and Facebook are set in `js/config.js` (and shown on the home hero, home contact section, contact page and footer).
+To change one, edit `js/config.js` and the matching links in `index.html`.
