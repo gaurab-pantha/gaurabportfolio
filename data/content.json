@@ -1,0 +1,481 @@
+{
+  "version": 1,
+  "profile": {
+    "name": "Gaurab Pantha",
+    "heroLabel": "Student · Designer · Builder",
+    "heroLine1": "Turning ideas into",
+    "heroLine2": "digital experiences.",
+    "intro": "Hey, I'm Gaurab Pantha — a student, graphic designer, and developer from Nepal. I create visual designs, build digital projects, and explore technology through hands-on learning.",
+    "location": "Tilottama, Nepal",
+    "school": "Shree Shanti Namuna Secondary School",
+    "grade": "Grade 10",
+    "profileImage": "assets/images/profile/gaurab.jpg",
+    "tagline": "Learn by building. Create with purpose. Improve with every project.",
+    "about": [
+      "I'm Gaurab Pantha, a Grade 10 student at Shree Shanti Namuna Secondary School in Tilottama, Nepal, interested in the intersection of design, software, and technology.",
+      "Graphic design is one of the areas I enjoy most. I create posters, social media graphics, event announcements, promotional content, and other visual materials, especially for school and technology activities.",
+      "Alongside design, I'm learning programming through hands-on projects — web development, JavaScript, Python, browser extensions, electronics, and robotics.",
+      "Through SSIRC, I contribute to design, marketing, media, documentation, and club activities. I'm still learning, and I enjoy getting better through building, experimenting, and feedback."
+    ],
+    "aspiration": "I want to keep strengthening my programming fundamentals and one day work toward a career in technology.",
+    "links": {
+      "email": "gpantha99@gmail.com",
+      "github": "https://github.com/gaurab-pantha",
+      "instagram": "https://www.instagram.com/myselfgaurav99/",
+      "facebook": "https://www.facebook.com/myselfgaurav99",
+      "linkedin": ""
+    },
+    "ssirc": {
+      "name": "Shanti Science ICT & Robotics Club (SSIRC)",
+      "website": "https://shantisirc.com/",
+      "email": "ssirc.club@gmail.com",
+      "location": "Tilottama-5, Manigram, Rupandehi, Nepal",
+      "roles": [
+        "Marketing Head",
+        "Graphic Designing Head",
+        "Media & Documentation Head",
+        "Administrator Head"
+      ],
+      "summary": "For around three years, I've been part of SSIRC at Shree Shanti Namuna Secondary School — a school technology club where I've grown the most outside the classroom.",
+      "contributions": [
+        "Marketing and outreach for club activities",
+        "Graphic design for events and announcements",
+        "Social media content and event promotion",
+        "Media documentation during events and workshops",
+        "Administration and member coordination",
+        "Taking part in the club's technology activities"
+      ]
+    }
+  },
+  "projects": [
+    {
+      "id": "reminder",
+      "name": "Reminder",
+      "category": "Browser Extension",
+      "status": "",
+      "featured": true,
+      "summary": "A browser extension focused on reminders and everyday productivity.",
+      "tags": [
+        "JavaScript",
+        "Chrome API",
+        "Productivity"
+      ],
+      "image": "assets/images/projects/reminder.jpg",
+      "link": "",
+      "repo": "",
+      "demo": "",
+      "problem": "",
+      "features": [],
+      "contribution": "",
+      "lessons": "",
+      "screenshots": [],
+      "hidden": false
+    },
+    {
+      "id": "site-blocker",
+      "name": "Site Blocker",
+      "category": "Browser Extension",
+      "status": "",
+      "featured": true,
+      "summary": "A browser extension experiment for blocking selected websites.",
+      "tags": [
+        "JavaScript",
+        "Chrome API"
+      ],
+      "image": "assets/images/projects/site-blocker.jpg",
+      "link": "",
+      "repo": "",
+      "demo": "",
+      "problem": "",
+      "features": [],
+      "contribution": "",
+      "lessons": "",
+      "screenshots": [],
+      "hidden": false
+    },
+    {
+      "id": "esp32-bluetooth-car",
+      "name": "ESP32 Bluetooth Car",
+      "category": "Robotics",
+      "status": "",
+      "featured": true,
+      "summary": "A hands-on robotics project exploring embedded technology, Bluetooth control, electronics, and motors.",
+      "tags": [
+        "ESP32",
+        "Bluetooth",
+        "L298N",
+        "DC motors"
+      ],
+      "image": "assets/images/projects/esp32-car.jpg",
+      "link": "",
+      "repo": "",
+      "demo": "",
+      "problem": "",
+      "features": [],
+      "contribution": "",
+      "lessons": "",
+      "screenshots": [],
+      "hidden": false
+    },
+    {
+      "id": "dark-mode",
+      "name": "Dark Mode",
+      "category": "Browser Extension",
+      "status": "",
+      "featured": false,
+      "summary": "A browser extension that applies dark-mode styling across websites.",
+      "tags": [
+        "JavaScript",
+        "CSS",
+        "Chrome API"
+      ],
+      "image": "assets/images/projects/dark-mode.jpg",
+      "link": "",
+      "repo": "",
+      "demo": "",
+      "problem": "",
+      "features": [],
+      "contribution": "",
+      "lessons": "",
+      "screenshots": [],
+      "hidden": false
+    },
+    {
+      "id": "stardance",
+      "name": "Stardance",
+      "category": "Hack Club",
+      "status": "",
+      "featured": false,
+      "summary": "A project built through Hack Club's YSWS ecosystem, used as a way to learn and experiment.",
+      "tags": [
+        "Hack Club",
+        "YSWS"
+      ],
+      "image": "assets/images/projects/stardance.jpg",
+      "link": "",
+      "repo": "",
+      "demo": "",
+      "problem": "",
+      "features": [],
+      "contribution": "",
+      "lessons": "",
+      "screenshots": [],
+      "hidden": false
+    },
+    {
+      "id": "3am",
+      "name": "3AM",
+      "category": "Hack Club",
+      "status": "",
+      "featured": false,
+      "summary": "A Hack Club project built for exploration and hands-on learning.",
+      "tags": [
+        "Hack Club",
+        "YSWS"
+      ],
+      "image": "assets/images/projects/3am.jpg",
+      "link": "",
+      "repo": "",
+      "demo": "",
+      "problem": "",
+      "features": [],
+      "contribution": "",
+      "lessons": "",
+      "screenshots": [],
+      "hidden": false
+    },
+    {
+      "id": "beest",
+      "name": "Beest",
+      "category": "Hack Club",
+      "status": "",
+      "featured": false,
+      "summary": "A Hack Club project built for exploration and hands-on learning.",
+      "tags": [
+        "Hack Club",
+        "YSWS"
+      ],
+      "image": "assets/images/projects/beest.jpg",
+      "link": "",
+      "repo": "",
+      "demo": "",
+      "problem": "",
+      "features": [],
+      "contribution": "",
+      "lessons": "",
+      "screenshots": [],
+      "hidden": false
+    }
+  ],
+  "designs": [],
+  "events": [
+    {
+      "id": "robotics-workshop",
+      "title": "Robotics Workshop & Competition",
+      "category": "Robotics",
+      "date": "",
+      "image": "assets/images/events/robotics.jpg",
+      "description": "Robo Race, Robo Soccer, and Robo Sumo — hands-on robotics competition and workshop at SSIRC.",
+      "hidden": false
+    },
+    {
+      "id": "aviation-program",
+      "title": "Aviation Program",
+      "category": "Aviation",
+      "date": "",
+      "image": "assets/images/events/aviation.jpg",
+      "description": "Small aircraft body construction, drone flying, and hands-on aviation activities.",
+      "hidden": false
+    },
+    {
+      "id": "cad-session",
+      "title": "CAD Design Session",
+      "category": "CAD Design",
+      "date": "",
+      "image": "assets/images/events/cad-session.jpg",
+      "description": "A CAD design session held with Hack Club and PrynixDevs.",
+      "hidden": false
+    },
+    {
+      "id": "advance-robotics",
+      "title": "Advance Robotics Training",
+      "category": "Robotics",
+      "date": "",
+      "image": "assets/images/events/workshop.jpg",
+      "description": "Hands-on robotics and battle-bot related training and practice.",
+      "hidden": false
+    }
+  ],
+  "gallery": [
+    {
+      "id": "gallery-01",
+      "image": "assets/images/gallery/gallery-01.jpg",
+      "caption": "SSIRC · Robotics workshop",
+      "category": "SSIRC",
+      "date": "",
+      "hidden": false
+    },
+    {
+      "id": "gallery-02",
+      "image": "assets/images/gallery/gallery-02.jpg",
+      "caption": "School event",
+      "category": "SSIRC",
+      "date": "",
+      "hidden": false
+    },
+    {
+      "id": "gallery-03",
+      "image": "assets/images/gallery/gallery-03.jpg",
+      "caption": "Aviation activity",
+      "category": "SSIRC",
+      "date": "",
+      "hidden": false
+    },
+    {
+      "id": "gallery-04",
+      "image": "assets/images/gallery/gallery-04.jpg",
+      "caption": "CAD design session",
+      "category": "SSIRC",
+      "date": "",
+      "hidden": false
+    },
+    {
+      "id": "gallery-05",
+      "image": "assets/images/gallery/gallery-05.jpg",
+      "caption": "Team & behind-the-scenes",
+      "category": "SSIRC",
+      "date": "",
+      "hidden": false
+    }
+  ],
+  "skills": [
+    {
+      "group": "Design & visual communication",
+      "items": [
+        "Graphic design",
+        "Poster & social media design",
+        "Visual hierarchy & typography",
+        "Branding & consistency",
+        "Canva",
+        "Figma"
+      ]
+    },
+    {
+      "group": "Web development",
+      "items": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Responsive layouts",
+        "Python"
+      ]
+    },
+    {
+      "group": "Tools & workflow",
+      "items": [
+        "Git & GitHub",
+        "Cloudflare Pages",
+        "Custom domains & DNS",
+        "Browser extension basics"
+      ]
+    },
+    {
+      "group": "Technology & hardware",
+      "items": [
+        "ESP32",
+        "Bluetooth control",
+        "L298N motor driver & DC motors",
+        "Robotics & ICT activities"
+      ]
+    },
+    {
+      "group": "Communication & teamwork",
+      "items": [
+        "Marketing & promotion",
+        "Media & documentation",
+        "Visual storytelling",
+        "Club administration"
+      ]
+    }
+  ],
+  "pages": {
+    "home": {
+      "cta1": "Explore my work",
+      "cta2": "About me",
+      "lead": "Learn by building. Create with purpose. Improve with every project."
+    },
+    "homeWhat": {
+      "lead": "Design and technology, approached as one practice rather than two separate skills.",
+      "eyebrow": "What I do",
+      "title": "Where design meets technology"
+    },
+    "homeProjects": {
+      "eyebrow": "Featured projects",
+      "title": "Things I've built and explored"
+    },
+    "homeSsirc": {
+      "eyebrow": "Student leadership",
+      "title": "Shanti Science ICT & Robotics Club"
+    },
+    "homeMoments": {
+      "eyebrow": "Moments",
+      "title": "Behind the scenes"
+    },
+    "homeContact": {
+      "eyebrow": "Get in touch",
+      "title": "Have an idea? Let's connect.",
+      "text": "I'm always interested in learning, building useful things, and exploring creative technology projects. Take a look at my work or reach out to connect."
+    },
+    "footer": {
+      "tagline": "Designed with curiosity. Built through learning."
+    },
+    "about": {
+      "eyebrow": "About",
+      "title": "Still learning, still building.",
+      "lead": "Where I study, what I'm exploring, and how design and technology fit together in my work."
+    },
+    "aboutSkills": {
+      "lead": "Grouped by area — no made-up percentages. I'm still growing in all of them.",
+      "eyebrow": "Skills",
+      "title": "Tools and areas I practice with"
+    },
+    "aboutJourney": {
+      "lead": "Learn something, experiment, build a project, test it, improve it, share it.",
+      "eyebrow": "Learning journey",
+      "title": "How this has taken shape"
+    },
+    "projects": {
+      "eyebrow": "Projects",
+      "title": "Selected work",
+      "lead": "Browser extensions, robotics, and Hack Club projects — open any project for details, status and links."
+    },
+    "design": {
+      "eyebrow": "Design",
+      "title": "Visual work.",
+      "lead": "Posters, social media graphics, and event materials — much of it created for SSIRC and school technology activities."
+    },
+    "gallery": {
+      "eyebrow": "Gallery",
+      "title": "Moments.",
+      "lead": "Photos from SSIRC activities, school events and behind-the-scenes moments."
+    },
+    "experience": {
+      "eyebrow": "Experience",
+      "title": "Student leadership at SSIRC.",
+      "lead": "Marketing, design, media and administration for a school technology club.",
+      "rolesTitle": "Four roles, one team"
+    },
+    "experienceActivities": {
+      "lead": "Club activities I took part in or helped promote and document — not everything shown was built or organised by me alone.",
+      "eyebrow": "Activities",
+      "title": "Workshops, sessions & competitions"
+    },
+    "experienceMoments": {
+      "eyebrow": "Gallery",
+      "title": "Moments from SSIRC and beyond"
+    },
+    "contact": {
+      "eyebrow": "Contact",
+      "title": "Have an idea? Let's connect.",
+      "lead": "I'm always interested in learning, building useful things, and exploring creative technology projects. Take a look at my work or reach out to connect."
+    }
+  },
+  "services": [
+    {
+      "title": "Graphic Design",
+      "description": "Posters, social media graphics, event materials, and digital content with clear hierarchy and consistent identity."
+    },
+    {
+      "title": "Web & Extensions",
+      "description": "Websites and browser extensions built with HTML, CSS, and JavaScript, shipped through GitHub."
+    },
+    {
+      "title": "Robotics & Electronics",
+      "description": "Learning through ESP32 projects, motor control, and hands-on robotics activities."
+    },
+    {
+      "title": "Media & Marketing",
+      "description": "Event promotion, documentation, and visual storytelling for school technology activities."
+    }
+  ],
+  "facts": [
+    {
+      "label": "Based in",
+      "value": "Nepal"
+    },
+    {
+      "label": "Studying",
+      "value": "Grade 10"
+    },
+    {
+      "label": "Focus",
+      "value": "Design + Technology"
+    },
+    {
+      "label": "Exploring",
+      "value": "Robotics + Development"
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "Student",
+      "title": "Shree Shanti Namuna Secondary School",
+      "description": "Learning through school and personal projects — where the curiosity for design and technology started."
+    },
+    {
+      "stage": "SSIRC",
+      "title": "Shanti Science ICT & Robotics Club",
+      "description": "Design, marketing, media, documentation, administration, and technology activities — around three years and counting."
+    },
+    {
+      "stage": "Hack Club",
+      "title": "Building through Hack Club",
+      "description": "Using Hack Club's YSWS ecosystem as a way to build, experiment, and learn by making."
+    },
+    {
+      "stage": "Personal projects",
+      "title": "Web, extensions & robotics",
+      "description": "Web projects, browser extensions, and electronics, built and improved over time."
+    }
+  ]
+}

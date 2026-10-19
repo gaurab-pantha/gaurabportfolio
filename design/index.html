@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Design — Gaurab Pantha</title>
+<meta name="description" content="Graphic design portfolio of Gaurab Pantha: posters, social media graphics and event materials, including work for SSIRC.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Design — Gaurab Pantha">
+<meta property="og:description" content="Graphic design portfolio of Gaurab Pantha: posters, social media graphics and event materials, including work for SSIRC.">
+<meta property="og:url" content="https://gaurabdev.com/design/">
+<meta property="og:site_name" content="GAURABDEV">
+<meta property="og:image" content="https://gaurabdev.com/assets/images/og-card.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Gaurab Pantha — student, designer and developer from Nepal">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://gaurabdev.com/assets/images/og-card.jpg">
+<link rel="canonical" href="https://gaurabdev.com/design/">
+<meta name="theme-color" content="#0B0F19">
+<meta name="color-scheme" content="dark">
+<script>document.documentElement.classList.add("js")</script>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/responsive.css">
+</head>
+<body>
+
+<a href="#main" class="skip-link">Skip to content</a>
+<div class="scroll-progress" aria-hidden="true"></div>
+
+<header class="site-header">
+  <div class="container nav">
+    <a href="/" class="nav-logo" aria-label="GAURABDEV — home">GAURAB<span>DEV</span></a>
+
+    <nav class="nav-links" aria-label="Primary">
+    <a href="/">Home</a>
+    <a href="/about/">About</a>
+    <a href="/projects/">Projects</a>
+    <a href="/design/" aria-current="page">Design</a>
+    <a href="/gallery/">Gallery</a>
+    <a href="/experience/">Experience</a>
+    <a href="/contact/">Contact</a>
+    </nav>
+
+    <div class="nav-cta">
+      <a href="/contact/" class="btn btn-ghost btn-small">Get in touch</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <nav id="mobile-menu" class="mobile-menu" aria-label="Mobile">
+    <a href="/">Home</a>
+    <a href="/about/">About</a>
+    <a href="/projects/">Projects</a>
+    <a href="/design/" aria-current="page">Design</a>
+    <a href="/gallery/">Gallery</a>
+    <a href="/experience/">Experience</a>
+    <a href="/contact/">Contact</a>
+    <a href="/contact/" class="btn btn-primary">Get in touch</a>
+  </nav>
+</header>
+
+<main id="main" tabindex="-1">
+
+  <div class="page-header">
+    <div class="container">
+      <p class="eyebrow" data-bind="pages.design.eyebrow" data-reveal>Design</p>
+      <h1 data-bind="pages.design.title" data-reveal>Visual work.</h1>
+      <p data-bind="pages.design.lead" data-reveal>Posters, social media graphics, and event materials — much of it created for SSIRC and school technology activities.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="filter-bar" role="group" aria-label="Filter designs" data-filter-bar="designs" hidden></div>
+      <div class="design-grid" id="design-grid" hidden></div>
+      <div class="design-empty" id="design-empty" hidden>
+        <p class="eyebrow">Coming soon</p>
+        <h2 class="section-title">Design work is being added.</h2>
+        <p>My posters and graphics are being uploaded. In the meantime, see photos from club activities in the <a href="/gallery/">Gallery</a>.</p>
+      </div>
+      <p class="design-credit">Designs made for SSIRC are credited to the club where applicable.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">GAURAB<span>DEV</span></div>
+        <div class="footer-tagline" data-bind="pages.footer.tagline">Designed with curiosity. Built through learning.</div>
+      </div>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="/">Home</a>
+        <a href="/about/">About</a>
+        <a href="/projects/">Projects</a>
+        <a href="/design/">Design</a>
+        <a href="/gallery/">Gallery</a>
+        <a href="/experience/">Experience</a>
+        <a href="/contact/">Contact</a>
+      </nav>
+      <div class="footer-social"></div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span id="year">2026</span> Gaurab Pantha. All rights reserved.</span>
+      <a href="#main" class="back-to-top">Back to top &uarr;</a>
+    </div>
+  </div>
+</footer>
+
+<div class="dmodal" id="design-modal" role="dialog" aria-modal="true" aria-label="Design details" aria-hidden="true">
+  <div class="dm-box">
+    <button class="dm-close" aria-label="Close">&times;</button>
+    <div class="dm-media">
+      <img class="dm-img" alt="">
+      <button class="dm-nav dm-prev" aria-label="Previous design">&larr;</button>
+      <button class="dm-nav dm-next" aria-label="Next design">&rarr;</button>
+    </div>
+    <div class="dm-info">
+      <p class="dm-cat eyebrow"></p>
+      <h2 class="dm-title"></h2>
+      <dl class="dm-meta"></dl>
+      <p class="dm-count" aria-live="polite"></p>
+    </div>
+  </div>
+</div>
+
+<script src="/js/content.js"></script>
+<script src="/js/main.js"></script>
+<script>document.getElementById("year").textContent=new Date().getFullYear()</script>

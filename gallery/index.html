@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery — Gaurab Pantha</title>
+<meta name="description" content="Photos from SSIRC activities, school events and behind-the-scenes moments by Gaurab Pantha.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Gallery — Gaurab Pantha">
+<meta property="og:description" content="Photos from SSIRC activities, school events and behind-the-scenes moments by Gaurab Pantha.">
+<meta property="og:url" content="https://gaurabdev.com/gallery/">
+<meta property="og:site_name" content="GAURABDEV">
+<meta property="og:image" content="https://gaurabdev.com/assets/images/og-card.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Gaurab Pantha — student, designer and developer from Nepal">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://gaurabdev.com/assets/images/og-card.jpg">
+<link rel="canonical" href="https://gaurabdev.com/gallery/">
+<meta name="theme-color" content="#0B0F19">
+<meta name="color-scheme" content="dark">
+<script>document.documentElement.classList.add("js")</script>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/responsive.css">
+</head>
+<body>
+
+<a href="#main" class="skip-link">Skip to content</a>
+<div class="scroll-progress" aria-hidden="true"></div>
+
+<header class="site-header">
+  <div class="container nav">
+    <a href="/" class="nav-logo" aria-label="GAURABDEV — home">GAURAB<span>DEV</span></a>
+
+    <nav class="nav-links" aria-label="Primary">
+    <a href="/">Home</a>
+    <a href="/about/">About</a>
+    <a href="/projects/">Projects</a>
+    <a href="/design/">Design</a>
+    <a href="/gallery/" aria-current="page">Gallery</a>
+    <a href="/experience/">Experience</a>
+    <a href="/contact/">Contact</a>
+    </nav>
+
+    <div class="nav-cta">
+      <a href="/contact/" class="btn btn-ghost btn-small">Get in touch</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <nav id="mobile-menu" class="mobile-menu" aria-label="Mobile">
+    <a href="/">Home</a>
+    <a href="/about/">About</a>
+    <a href="/projects/">Projects</a>
+    <a href="/design/">Design</a>
+    <a href="/gallery/" aria-current="page">Gallery</a>
+    <a href="/experience/">Experience</a>
+    <a href="/contact/">Contact</a>
+    <a href="/contact/" class="btn btn-primary">Get in touch</a>
+  </nav>
+</header>
+
+<main id="main" tabindex="-1">
+
+  <div class="page-header">
+    <div class="container">
+      <p class="eyebrow" data-bind="pages.gallery.eyebrow" data-reveal>Gallery</p>
+      <h1 data-bind="pages.gallery.title" data-reveal>Moments.</h1>
+      <p data-bind="pages.gallery.lead" data-reveal>Photos from SSIRC activities, school events and behind-the-scenes moments.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="filter-bar" role="group" aria-label="Filter photos" data-filter-bar="gallery" hidden></div>
+      <div class="gallery-grid" id="gallery-grid" data-needs-content></div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">GAURAB<span>DEV</span></div>
+        <div class="footer-tagline" data-bind="pages.footer.tagline">Designed with curiosity. Built through learning.</div>
+      </div>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="/">Home</a>
+        <a href="/about/">About</a>
+        <a href="/projects/">Projects</a>
+        <a href="/design/">Design</a>
+        <a href="/gallery/">Gallery</a>
+        <a href="/experience/">Experience</a>
+        <a href="/contact/">Contact</a>
+      </nav>
+      <div class="footer-social"></div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span id="year">2026</span> Gaurab Pantha. All rights reserved.</span>
+      <a href="#main" class="back-to-top">Back to top &uarr;</a>
+    </div>
+  </div>
+</footer>
+
+<div class="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer" aria-hidden="true">
+  <div class="lightbox-inner">
+    <button class="lightbox-close" aria-label="Close image">&times;</button>
+    <img alt="">
+    <p class="lightbox-cap"></p>
+  </div>
+</div>
+
+<script src="/js/content.js"></script>
+<script src="/js/main.js"></script>
+<script>document.getElementById("year").textContent=new Date().getFullYear()</script>

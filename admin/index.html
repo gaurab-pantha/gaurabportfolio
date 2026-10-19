@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin — GAURABDEV</title>
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#0B0F19">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+<div id="app">
+  <!-- Login -->
+  <main id="login" class="login">
+    <div class="login-card">
+      <p class="brand">GAURAB<span>DEV</span> <em>admin</em></p>
+      <h1>Manage your portfolio</h1>
+      <p class="muted">Add projects, designs, events and photos. Changes are saved to your GitHub repository and your site updates automatically.</p>
+
+      <form id="login-form" autocomplete="off">
+        <label>GitHub repository
+          <input id="in-repo" type="text" placeholder="gaurab-pantha/your-portfolio-repo" required spellcheck="false">
+        </label>
+        <label>Access token
+          <input id="in-token" type="password" placeholder="github_pat_…" required spellcheck="false" autocomplete="off">
+        </label>
+        <label class="check"><input id="in-remember" type="checkbox"> Remember on this device</label>
+        <p id="login-error" class="error" role="alert" hidden></p>
+        <button class="btn primary" type="submit" id="login-btn">Sign in</button>
+      </form>
+
+      <details class="help">
+        <summary>How do I get a token?</summary>
+        <ol>
+          <li>Open GitHub → <strong>Settings → Developer settings → Personal access tokens → Fine-grained tokens</strong> → <em>Generate new token</em>.</li>
+          <li><strong>Repository access:</strong> “Only select repositories” → choose your portfolio repo.</li>
+          <li><strong>Permissions → Repository → Contents:</strong> set to <em>Read and write</em>.</li>
+          <li>Generate, copy the token, and paste it above. Only you have it — it is never stored on the website.</li>
+        </ol>
+      </details>
+    </div>
+  </main>
+
+  <!-- Dashboard -->
+  <div id="dash" hidden>
+    <header class="topbar">
+      <p class="brand">GAURAB<span>DEV</span> <em>admin</em></p>
+      <span id="status" class="pill">Up to date</span>
+      <div class="topbar-actions">
+        <a class="btn ghost" href="../" target="_blank" rel="noopener">View site ↗</a>
+        <button class="btn ghost" id="btn-backup" type="button">Backup</button>
+        <button class="btn primary" id="btn-publish" type="button" disabled>Publish changes</button>
+        <button class="btn ghost" id="btn-logout" type="button">Sign out</button>
+      </div>
+    </header>
+
+    <div class="layout">
+      <nav id="tabs" class="tabs" aria-label="Sections"></nav>
+      <main id="panel" class="panel" tabindex="-1"></main>
+    </div>
+  </div>
+</div>
+
+<dialog id="editor" aria-labelledby="editor-title">
+  <form id="editor-form" method="dialog" novalidate>
+    <header class="editor-head">
+      <h2 id="editor-title"></h2>
+      <button type="button" class="icon-btn" id="editor-close" aria-label="Close">&times;</button>
+    </header>
+    <div id="editor-body" class="editor-body"></div>
+    <p id="editor-error" class="error" role="alert" hidden></p>
+    <footer class="editor-foot">
+      <button type="button" class="btn ghost" id="editor-cancel">Cancel</button>
+      <button type="submit" class="btn primary">Save</button>
+    </footer>
+  </form>
+</dialog>
+
+<div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+<script src="admin.js"></script>
+</body>
+</html>
