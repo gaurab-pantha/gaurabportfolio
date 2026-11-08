@@ -205,6 +205,33 @@
       "lessons": "",
       "screenshots": [],
       "hidden": false
+    },
+    {
+      "id": "createkit",
+      "name": "CreateKit",
+      "category": "Web Utility",
+      "status": "Completed",
+      "featured": true,
+      "hidden": false,
+      "summary": "A free, all-in-one browser toolkit that processes files locally on your device for absolute privacy with no account required. It features instant PDF tools, an AI background remover, media converters, a custom QR generator, and privacy utilities.",
+      "tags": [
+        "Web Utility"
+      ],
+      "image": "assets/uploads/createkit-mw7d00z6by.jpg",
+      "link": "",
+      "repo": "",
+      "demo": "https://createkit.gaurabdev.com/",
+      "problem": "Most online file converters and utility tools require creating accounts, contain annoying ads, or force users to upload their sensitive files to external servers. CreateKit solves this by providing a completely free, account-less web toolkit where all media, images, and text files are processed entirely inside the user's browser, keeping their data 100% private and local.",
+      "features": [
+        "• Complete client-side processing ensuring files never leave your device",
+        "• AI-powered image background removal running locally in the browser",
+        "• Quick PDF manipulation tools to merge or split documents instantly",
+        "• Fast MP4 to MP3 audio converter and customizable image compressor",
+        "• Responsive, clean interface containing zero ads or account paywalls"
+      ],
+      "contribution": "Designed and developed the entire front-end user interface using modern HTML and CSS layouts. Wrote the complete JavaScript application logic to integrate helper libraries client-side, managed local browser memory for handling larger assets, and built the responsive routing for individual tool views.",
+      "lessons": "Deepened my understanding of client-side JavaScript file manipulation and managing external WASM/library dependencies dynamically in the browser. I also learned how to handle browser memory budgets when processing large files locally and how to optimize complex CSS layouts for a clean, cohesive tool dashboard.",
+      "screenshots": []
     }
   ],
   "designs": [],
